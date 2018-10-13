@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+
+  <body>
+
+    <div class="container">
+      <!-- Page Content goes here -->
+      <h1>Twitter Emotion Detector</h1>
+      <div class="divider"></div>
+    </br>
+      <div class="row">
+        <div class="input-field col s12">
+         <select id="mode">
+           <option value="" disabled selected>Tweet Mode</option>
+           <option value="1">Auto</option>
+           <option value="2">Manual</option>
+         </select>
+         <label>Tweet</label>
+       </div>
+      </div>
+
+      <div class="row" id="Auto">
+        <h4>Automatic Mode</h4>
+        <!-- <h5>Load Twitter Data</h5></br> -->
+        <div class="col s6">
+          <div class="input-field">
+            <input id="keyword" type="text">
+            <label for="keyword">Keyword For Analysis</label>
+          </div>
+        </div>
+        <div class="col s6">
+        </br><button class="btn waves-effect waves-light" type="submit" name="action" id="TwitDataBtn">Load Data
+            <i class="material-icons right">send</i>
+          </button>
+        </div>
+
+      </div>
+      <div class="row" id="Manual">
+        <h4>In Manual Mode</h4>
+          <div class="col s6">
+            <div class="input-field">
+              <input id="manTweet" type="text">
+              <label for="manTweet">Enter Tweet you want to analyze</label>
+            </div>
+          </div>
+        </br><div class="col s6">
+            <button class="btn waves-effect waves-light" id="tweetAnalyze">Analyze
+              <i class="material-icons right">send</i>
+            </button>
+          </div>
+      </div>
+      <div class="row center" id="spinLoader">
+        <div class="preloader-wrapper small active">
+         <div class="spinner-layer spinner-green-only">
+           <div class="circle-clipper left">
+             <div class="circle"></div>
+           </div><div class="gap-patch">
+             <div class="circle"></div>
+           </div><div class="circle-clipper right">
+             <div class="circle"></div>
+           </div>
+         </div>
+        </div>
+      </div>
+      <div class="row" id="divTestTweet">
+      </div>
+      <div class="row" id="divResultTweet">
+      </div>
+
+  </body>
+
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+  <script src="js/default.js"></script>
+</html>
